@@ -23,7 +23,7 @@ db.once('open', async () => {
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: '1-d.jpeg',
-      cardId: '1',
+      // cardId: '1',
       price: 62000,
       year: 2022
     },
@@ -33,7 +33,7 @@ db.once('open', async () => {
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: '3-b.jpeg',
-      cardId: '2',
+      // cardId: '2',
       price: 75000,
       year: 2021
     },
@@ -43,7 +43,7 @@ db.once('open', async () => {
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: '3-f.jpeg',
-      cardId: '3',
+      // cardId: '3',
       price: 65000,
       year: 2022
     }

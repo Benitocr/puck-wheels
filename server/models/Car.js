@@ -19,10 +19,10 @@ const carSchema = new Schema({
     image: {
         type: String,
     },
-    carId: {
-        type: String,
-        required: true
-    },
+    // carId: {
+    //     type: String,
+    //     required: true
+    // },
     price: {
         type: String,
         required: true
@@ -34,4 +34,7 @@ const carSchema = new Schema({
     
 });
 
-module.exports = carSchema;
+const Car = mongoose.model('Car', carSchema);
+
+module.exports = Car;
+
