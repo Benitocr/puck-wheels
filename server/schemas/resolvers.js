@@ -28,7 +28,7 @@ const resolvers = {
         user: async (parent, args, context) => {
           if (context.user) {
             const user = await User.findById(context.user._id).populate({
-              path: 'wishList.products',
+              path: 'wishList.cars',
               populate: 'category'
             });
     
@@ -60,10 +60,10 @@ const resolvers = {
     
           return { token, user };
         },
-        addWishList: async (parent, { products }, context) => {
+        addWishList: async (parent, { cars }, context) => {
           console.log(context);
           if (context.user) {
-            const order = new WishList({ products });
+            const wishList = new WishList({ cars });
     
             await User.findByIdAndUpdate(context.user._id, { $push: { wishList: wishList } });
     
