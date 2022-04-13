@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 const ModalSignIn = ({onClose}) => {
 
-  const [error, setError] = useState([]);
+
     const [inputs, setInputs] = useState({
         email: "",
         password: ""
