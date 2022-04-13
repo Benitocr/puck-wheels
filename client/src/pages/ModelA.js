@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ModelA1 from "../assets/img/1a.jpeg";
+import ModelA1 from "../assets/img/1-a.jpeg";
 
 
 const ModelA = () => {
