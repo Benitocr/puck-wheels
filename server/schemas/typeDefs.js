@@ -50,7 +50,7 @@ const typeDefs = gql `
         addUser(email: String!, password: String!) : Auth
         addWishList(car: [ID]!): WishList
         updateCar(_id: ID!, quantity: Int!): Car
-        removeCar(carId: String!) : User
+        removeCar(carId: String!) : Car
     }
     `;
 

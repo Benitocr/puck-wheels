@@ -28,7 +28,7 @@ const resolvers = {
         user: async (parent, args, context) => {
           if (context.user) {
             const user = await User.findById(context.user._id).populate({
-              path: 'wishList.products',
+              path: 'wishList.cars',
               populate: 'category'
             });
     
@@ -72,17 +72,13 @@ const resolvers = {
     
           throw new AuthenticationError('Not logged in');
         },
-        // updateUser: async (parent, args, context) => {
-        //   if (context.user) {
-        //     return await User.findByIdAndUpdate(context.user._id, args, { new: true });
-        //   }
-    
-        //   throw new AuthenticationError('Not logged in');
-        // },
         updateCar: async (parent, { _id, quantity }) => {
           const decrement = Math.abs(quantity) * -1;
     
           return await Car.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+        },
+        removeCar: async (parent, { carId }) => {
+          return await Car.findByIdAndDelete(carId);
         },
         login: async (parent, { email, password }) => {
           const user = await User.findOne({ email });

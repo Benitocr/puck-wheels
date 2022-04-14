@@ -7,11 +7,6 @@ const carSchema = new Schema({
         type: String,
         required: true
     },
-    category: {
-      type: Schema.Types.ObjectId,
-      ref: 'Category',
-      required: true
-    },
     description: {
         type: String,
         required: true
@@ -19,10 +14,6 @@ const carSchema = new Schema({
     image: {
         type: String,
     },
-    // carId: {
-    //     type: String,
-    //     required: true
-    // },
     price: {
         type: String,
         required: true
@@ -30,7 +21,12 @@ const carSchema = new Schema({
     year: {
         type: Number,
         required: true
-    }
+    },
+    category: {
+      type: Schema.Types.ObjectId,
+      ref: 'Category',
+      required: true
+    },
     
 });
 
