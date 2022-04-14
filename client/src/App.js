@@ -39,6 +39,13 @@ function App() {
           <StoreProvider>
             <Landing />
             <Home />
+            {/* <Switch>
+              <Route exact path="/modelA" component={ModelA} />
+              <Route exact path="/modelB" component={ModelB} />
+              <Route exact path="/modelC" component={ModelC} />
+              <Route exact path="/wishList" component={WistList} />
+              <Route component={NoMatch} />
+            </Switch> */}
           </StoreProvider>
         </div>
       </Router>
