@@ -259,6 +259,7 @@ body {
 
 /* ModelA Page */
 .box {
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,6 +267,7 @@ body {
 .model-container {
   background-color: rgb(19, 18, 18);
   width: 70vw;
+  min-width: 500px;
   height: auto;
   border-radius: 25px;
   display: flex;
@@ -279,10 +281,7 @@ body {
   border-radius: 25px;
   margin: 30px;
 }
-.description {
-    display: flex;
-    flex-direction: row;
-  }
+
 .image-bg {
   padding: 20px;
   display: flex;
@@ -292,7 +291,7 @@ body {
 .image {
   width: 500px;
   height: 350px;
-    padding: 20px;
+  padding: 20px;
 }
 .image-txt h1 {
   margin-top:250px;
@@ -330,6 +329,14 @@ body {
  color:#ffa500;
  font-size: 12px;
 }
+.price {
+  position: relative;
+}
+.dollar {
+  position: absolute;
+  top:20px;
+  left:-10px;
+}
 
 @media (max-width:1475px){
  .image-txt h1{
@@ -339,29 +346,10 @@ body {
   justify-content: center;
  }
  .text {
-   margin-left: 0px;
-  margin-right: 0px;
-  text-align: center;
- }
-   .description {
-    display: flex;
-    flex-direction: column;
-   justify-content: center;
-   align-items:center;
-  }
-
-
-}
-@media (max-width:1200px){
-  /* .description {
-    display: flex;
-    flex-direction: column;
-   justify-content: center;
-   align-items:center;
-  }
-   .text {
    margin-left: 0px !important;
   margin-right: 0px !important;
-  text-align: center;
- } */
+  text-align: center !important;
+  justify-content: center;
+ }
 }
+

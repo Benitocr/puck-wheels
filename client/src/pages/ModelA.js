@@ -21,9 +21,9 @@ const ModelA = () => {
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-12 description">
+                    <div class="col-md-12 ">
                       <div class="row text">
-                        <div class="col-md-6 align-flex">
+                        <div class="col-lg-6 align-flex">
                           <div class="fuel">
                             <p>FUEL CONSUMPTION</p>
                             <h1>22/28</h1>
@@ -35,11 +35,11 @@ const ModelA = () => {
                           </div>
                           <div class="price">
                             <p>STARTING AT</p>
-                            <span>$</span>
+                            <span class="dollar">$</span>
                             <h1>90,000</h1>
                           </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                           <p>
                             Lorem Ipsum har ikke alene overlevet fem
                             århundreder, men har også vundet indpas i
