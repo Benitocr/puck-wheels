@@ -9,7 +9,7 @@ const Home = () => {
     return (
       <>
         <div className="home-bg">
-          <div class="navbar">
+          {/* <div class="navbar">
             <div className="logo"></div>
             <span className="login-btns">
               <button className="login-btn">
@@ -25,10 +25,10 @@ const Home = () => {
                 <span>Model 2021</span>
               </button>
             </span>
-          </div>
-          <ModelA />
+          </div> */}
+          {/* <ModelA />
           <ModelB />
-          <ModelC />
+          <ModelC /> */}
         </div>
       </>
     );
