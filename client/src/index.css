@@ -266,23 +266,28 @@ body {
 .model-container {
   background-color: rgb(19, 18, 18);
   width: 70vw;
-  height: 70vw;
+  height: auto;
   border-radius: 25px;
   display: flex;
   justify-content: center;
   position: relative;
 }
 .inner {
-  width: 65vw;
-  height: 38vw;
+  width: 100%;
+  height: auto;
   border: 1px solid #ffa500;
   border-radius: 25px;
-  margin-top: 30px;
+  margin: 30px;
 }
+.description {
+    display: flex;
+    flex-direction: row;
+  }
 .image-bg {
   padding: 20px;
   display: flex;
   justify-content: flex-start;
+  flex-wrap:wrap;
 }
 .image {
   width: 500px;
@@ -302,7 +307,9 @@ body {
   font-weight: 100;
   font-family: 'Lato', sans-serif; 
 }
+
 .align-flex {
+  min-width:400px;
   display: flex;
   justify-content: space-between;
 }
@@ -322,4 +329,39 @@ body {
 .text .text-small, .text span {
  color:#ffa500;
  font-size: 12px;
+}
+
+@media (max-width:1475px){
+ .image-txt h1{
+   margin-top:10px;
+ } 
+ .image-bg {
+  justify-content: center;
+ }
+ .text {
+   margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+ }
+   .description {
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items:center;
+  }
+
+
+}
+@media (max-width:1200px){
+  /* .description {
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items:center;
+  }
+   .text {
+   margin-left: 0px !important;
+  margin-right: 0px !important;
+  text-align: center;
+ } */
 }
