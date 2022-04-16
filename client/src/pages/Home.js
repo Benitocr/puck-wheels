@@ -26,9 +26,9 @@ const Home = () => {
               </button>
             </span>
           </div> */}
-          {/* <ModelA />
+          <ModelA />
           <ModelB />
-          <ModelC /> */}
+          <ModelC />
         </div>
       </>
     );
