@@ -1,13 +1,23 @@
-import { useQuery } from "@apollo/client";
+import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_ALL_CARS } from "../utils/queries";
+import { ADD_WISH_LIST } from "../utils/mutations";
 
 const ModelC = () => {
   const { data, loading } = useQuery(QUERY_ALL_CARS, {
     variables: { category: null, year: 2021 },
   });
-  console.log(data);
+
   const carData = data?.cars || [];
-  console.log(carData);
+
+  const [addWishList, { error }] = useMutation(ADD_WISH_LIST);
+
+  async function saveToWishList(id) {
+    console.log(id);
+    const { data } = await addWishList({
+      variables: { car: id },
+    });
+    console.log(data);
+  }
   return (
     <>
       <div className="row">
@@ -52,6 +62,12 @@ const ModelC = () => {
                         <div class="col-lg-6">
                           <p>{el.description}</p>
                         </div>
+                        <button
+                          class="wish-list"
+                          onClick={() => saveToWishList(el._id)}
+                        >
+                          Save to Wish List
+                        </button>
                       </div>
                     </div>
                   </div>

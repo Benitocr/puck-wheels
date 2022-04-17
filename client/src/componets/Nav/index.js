@@ -13,13 +13,28 @@ function Nav() {
           </div>
           <span className="login-btns">
             <Link to="/wishList">
-              <button className="login-btn">Wish List</button>
+              <button className="login-btn">
+                <span>Wish List</span>
+              </button>
             </Link>
 
-              <Link to="/modelA"><button className="login-btn">Model 2023</button></Link>
-              <Link to="/modelB"> <button className="login-btn">Model 2022</button></Link>
-              <Link to="/modelC"> <button className="login-btn">Model 2021 </button></Link>
-         
+            <Link to="/modelA">
+              <button className="login-btn">
+                <span>Model 2023</span>
+              </button>
+            </Link>
+            <Link to="/modelB">
+              {" "}
+              <button className="login-btn">
+                <span>Model 2022</span>
+              </button>
+            </Link>
+            <Link to="/modelC">
+              {" "}
+              <button className="login-btn">
+                <span>Model 2021</span>
+              </button>
+            </Link>
           </span>
         </div>
       );
@@ -30,11 +45,15 @@ function Nav() {
           <div className="logo"></div>
           <span className="login-btns">
             <Link to="/signup">
-              <button className="login-btn"> Signup</button>
+              <button className="login-btn">
+                <span>Signup</span>
+              </button>
             </Link>
 
             <Link to="/login">
-              <button className="login-btn">Login</button>
+              <button className="login-btn">
+                <span>Login</span>
+              </button>
             </Link>
           </span>
         </div>

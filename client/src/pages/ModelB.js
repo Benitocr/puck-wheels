@@ -62,7 +62,7 @@ const ModelB = () => {
                         <div class="col-lg-6">
                           <p>{el.description}</p>
                         </div>
-                        <button onClick={() => saveToWishList(el._id)}>
+                        <button class="wish-list" onClick={() => saveToWishList(el._id)}>
                           Save to Wish List
                         </button>
                       </div>

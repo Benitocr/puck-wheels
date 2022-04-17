@@ -17,208 +17,207 @@ db.once('open', async () => {
   await Car.deleteMany();
 
   const cars = await Car.insertMany([
-   
     {
-      model: 'Mercedez Benz',
+      model: "Mercedez Benz",
       category: categories[2]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '3-f.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "3-f.png",
       // cardId: '1',
       price: 72000,
-      year: 2021
+      year: 2021,
     },
     {
-      model: 'Mercedez Benz',
+      model: "Mercedez Benz",
       category: categories[2]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '3-e.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "3-e.png",
       // cardId: '1',
       price: 66000,
-      year: 2021
+      year: 2021,
     },
     {
-      model: 'Mercedez Benz',
+      model: "Mercedez Benz",
       category: categories[2]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '3-d.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "3-d.png",
       // cardId: '1',
       price: 66000,
-      year: 2021
+      year: 2021,
     },
     {
-      model: 'Mercedez Benz',
+      model: "Mercedez Benz",
       category: categories[2]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '3-c.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "3-c.png",
       // cardId: '1',
       price: 66000,
-      year: 2021
+      year: 2021,
     },
-   
+
     {
-      model: 'Mercedez Benz',
+      model: "Mercedez Benz",
       category: categories[3]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '3-a.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "3-a.png",
       // cardId: '1',
       price: 69000,
-      year: 2021
+      year: 2021,
     },
     {
-      model: 'Mercedez Benz',
+      model: "Mercedez Benz",
       category: categories[2]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '2-f.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "2-f.png",
       // cardId: '1',
       price: 69000,
-      year: 2021
+      year: 2021,
     },
     {
-      model: 'Mercedez Benz',
+      model: "Mercedez Benz",
       category: categories[2]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '2-e.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "2-e.png",
       // cardId: '1',
       price: 67000,
-      year: 2021
+      year: 2021,
     },
     {
-      model: 'Mercedez Benz',
+      model: "Mercedez Benz",
       category: categories[3]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '2-d.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "2-d.png",
       // cardId: '1',
       price: 77000,
-      year: 2021
+      year: 2021,
     },
     {
-      model: 'Mercedez Benz',
+      model: "Mercedez Benz",
       category: categories[3]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '2-c.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "2-c.png",
       // cardId: '1',
       price: 77000,
-      year: 2021
+      year: 2021,
     },
     {
-      model: 'Mercedez Benz',
+      model: "Mercedez Benz",
       category: categories[2]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '2-b.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "2-b.png",
       // cardId: '1',
       price: 68000,
-      year: 2021
+      year: 2021,
     },
     {
-      model: 'Mercedez Benz',
+      model: "Mercedez Benz",
       category: categories[3]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '2-a.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "2-a.png",
       // cardId: '1',
       price: 65000,
-      year: 2021
+      year: 2021,
     },
     {
-      model: 'Rolls Royce',
+      model: "Rolls Royce",
       category: categories[3]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '1-a.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "1-a.png",
       // cardId: '1',
       price: 79000,
-      year: 2021
+      year: 2021,
     },
     {
-      model: 'Lamborghini',
+      model: "Lamborghini",
       category: categories[3]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '1-f.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "1-f.png",
       // cardId: '1',
       price: 102000,
-      year: 2021
+      year: 2021,
     },
     {
-      model: 'BMW',
+      model: "BMW",
       category: categories[2]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '1-e.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "1-e.png",
       // cardId: '1',
       price: 65000,
-      year: 2021
+      year: 2021,
     },
     {
-      model: 'Rolls Royce',
+      model: "Rolls Royce",
       category: categories[3]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '1-d.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "1-d.png",
       // cardId: '1',
       price: 75000,
-      year: 2022
+      year: 2022,
     },
     {
-      model: 'Rolls Royce',
+      model: "Rolls Royce",
       category: categories[2]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '1-c.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "1-c.png",
       // cardId: '1',
       price: 80000,
-      year: 2022
+      year: 2022,
     },
     {
-      model: 'Rolls Royce',
+      model: "Rolls Royce",
       category: categories[3]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '1-d.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "1-d.png",
       // cardId: '1',
       price: 82000,
-      year: 2023
+      year: 2023,
     },
     {
-      model: 'Rolls Royce',
+      model: "Rolls Royce",
       category: categories[0]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '1-b.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "1-b.png",
       // cardId: '1',
       price: 92000,
-      year: 2023
+      year: 2023,
     },
     {
-      model: 'Mercedes',
+      model: "Mercedes",
       category: categories[0]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '3-b.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "3-b.png",
       // cardId: '2',
       price: 75000,
-      year: 2021
+      year: 2021,
     },
     {
-      model: 'BMW',
+      model: "BMW",
       category: categories[0]._id,
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '3-f.png',
+        "The work-ready landscape dump was throttled by the Nissan. The 4WD, shock-resistant motor vehicle demolished while once the hand truck fixed the semi. The tough, aluminum step van braked but the automobile constructed the aluminum garbage truck. The ute trucked the durable driver. The durable tow hook was decelerated by the van. The platform body developed the tough combo body.",
+      image: "3-f.png",
       // cardId: '3',
       price: 65000,
-      year: 2023
-    }
+      year: 2023,
+    },
   ]);
 
 
