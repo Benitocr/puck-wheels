@@ -7,20 +7,19 @@ const resolvers = {
         categories: async () => {
           return await Category.find();
         },
-        cars: async (parent, { category, model }) => {
+        cars: async (parent, { category, year }) => {
           const params = {};
-    
+    console.log(category, year);
           if (category) {
             params.category = category;
           }
     
-          if (model) {
-            params.model = {
-              $regex: model
-            };
+          if (year) {
+            params.year = year;
           }
     
-          return await Car.find(params).populate('category');
+          const carData =  await Car.find(params).populate('category');
+          return carData;
         },
         car: async (parent, { _id }) => {
           return await Car.findById(_id).populate('category');
@@ -60,12 +59,13 @@ const resolvers = {
     
           return { token, user };
         },
-        addWishList: async (parent, { cars }, context) => {
+        addWishList: async (parent, { car }, context) => {
           console.log(context);
           if (context.user) {
-            const wishList = new WishList({ cars });
+
+            // const wishList = new WishList({ cars });
     
-            await User.findByIdAndUpdate(context.user._id, { $push: { wishList: wishList } });
+            await User.findByIdAndUpdate(context.user._id, { $push: { wishList: car } });
     
             return wishList;
           }

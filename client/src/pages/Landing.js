@@ -4,8 +4,7 @@ import ModalSignUp from "./SignUp";
 
 const Landing = () => {
 
-const [isModalSignIn, setModalSignIn ] = useState(false);
-const [isModalSignUp, setModalSignUp] = useState(false);
+
 
     return (
     <>

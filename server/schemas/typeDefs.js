@@ -38,7 +38,7 @@ const typeDefs = gql `
 
     type Query {
         categories: [Category]
-        cars(category: ID, name: String): [Car]
+        cars(category: ID, year: Int): [Car]
         car(_id: ID!): Car
         user: User
         wishList(_id: ID!): WishList
@@ -48,7 +48,7 @@ const typeDefs = gql `
     type Mutation {
         login(email: String!, password: String!) : Auth
         addUser(email: String!, password: String!) : Auth
-        addWishList(car: [ID]!): WishList
+        addWishList(car: ID!): WishList
         updateCar(_id: ID!, quantity: Int!): Car
         removeCar(carId: String!) : Car
     }

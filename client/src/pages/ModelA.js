@@ -1,22 +1,42 @@
-import React, { useState } from "react";
-import ModelA1 from "../assets/img/1-a.png";
-
+import { useQuery, useMutation } from "@apollo/client";
+import { QUERY_ALL_CARS } from "../utils/queries";
+import { ADD_WISH_LIST } from "../utils/mutations";
 
 const ModelA = () => {
+  const { data, loading } = useQuery(QUERY_ALL_CARS, {
+    variables: { category: null, year: 2023 },
+  });
 
-    return (
-      <>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="box">
-              <div className="model-container">
-                <div className="inner">
+  const carData = data?.cars || [];
+
+  const [addWishList, { error }] = useMutation(ADD_WISH_LIST);
+
+  async function saveToWishList(id) {
+    console.log(id);
+    const { data } = await addWishList({
+      variables: { id: id },
+    });
+    console.log(data);
+  }
+  return (
+    <>
+      <div className="row">
+        <div className="col-md-12">
+          <div className="box">
+            <div className="model-container">
+              {carData.map((el) => (
+                <div className="inner" key={el._id}>
                   <div className="image-bg">
                     <div>
-                      <img className="image" src={ModelA1} alt="ModelA-1" />
+                      <img
+                        className="image"
+                        src={require(`../assets/img/${el.image}`).default}
+                        alt="ModelA-1"
+                      />
                     </div>
                     <div className="image-txt">
-                      <h1>THE 2022 GENESIS G80</h1>
+                      <h1>{el.name}</h1>
+                      <h1>{el.model}</h1>
                       <h4>UNRIVALED. UNCOMPROMISED.</h4>
                     </div>
                   </div>
@@ -36,35 +56,26 @@ const ModelA = () => {
                           <div class="price">
                             <p>STARTING AT</p>
                             <span class="dollar">$</span>
-                            <h1>90,000</h1>
+                            <h1>{el.price}</h1>
                           </div>
                         </div>
                         <div class="col-lg-6">
-                          <p>
-                            Lorem Ipsum har ikke alene overlevet fem
-                            århundreder, men har også vundet indpas i
-                            elektronisk typografi uden væsentlige ændringer.
-                            Sætningen blev gjordt kendt i 1960'erne med
-                            lanceringen af Letraset-ark, som indeholdt afsnit
-                            med Lorem Ipsum, og senere med layoutprogrammer som
-                            Aldus PageMaker, som også indeholdt en udgave af
-                            Lorem Ipsum. Lorem Ipsum har ikke alene overlevet
-                            fem århundreder, men har også vundet indpas i
-                            elektronisk typografi uden væsentlige ændringer.
-                            Sætningen blev gjordt kendt i 1960'erne med
-                            lanceringen af Letraset-ark
-                          </p>
+                          <p>{el.description}</p>
                         </div>
+                        <button onClick={() => saveToWishList(el.id) }>
+                          Save to Wish List
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
-      </>
-    );
-}
+      </div>
+    </>
+  );
+};
 
 export default ModelA;

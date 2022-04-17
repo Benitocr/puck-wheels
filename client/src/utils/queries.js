@@ -17,17 +17,15 @@ export const QUERY_CARS = gql`
 `;
 
 export const QUERY_ALL_CARS = gql`
-  {
-    cars {
+ query cars($category: ID, $year: Int) {
+    cars(category: $category, year: $year) {
       _id
       model
       description
       image
       price
       year
-      category {
-        name
-      }
+ 
     }
   }
 `;

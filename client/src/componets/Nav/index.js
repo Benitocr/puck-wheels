@@ -8,53 +8,36 @@ function Nav() {
     if (Auth.loggedIn()) {
       return (
         <div class="navbar">
-            <div className="logo">
-              <Link to="/Home">
-           
-              </Link>
-            </div>
-            <span className="login-btns">
-              <button className="login-btn">
-              <Link to="/wishList">
-                Wish List
-              </Link>
-              </button>
-              <button className="login-btn">
-                <Link to="/modelA">
-                  Model 2023
-                </Link>
-              </button>
-              <button className="login-btn">
-                <Link to="/modelB">
-                  Model 2022
-                </Link>
-              </button>
-              <button className="login-btn">
-              <Link to="/modelC">
-                  Model 2021
-                </Link>
-              </button>
-            </span>
+          <div className="logo">
+            <Link to="/"></Link>
           </div>
-      )
+          <span className="login-btns">
+            <Link to="/wishList">
+              <button className="login-btn">Wish List</button>
+            </Link>
+
+              <Link to="/modelA"><button className="login-btn">Model 2023</button></Link>
+              <Link to="/modelB"> <button className="login-btn">Model 2022</button></Link>
+              <Link to="/modelC"> <button className="login-btn">Model 2021 </button></Link>
+         
+          </span>
+        </div>
+      );
     
     } else {
       return (
         <div className="navbar">
-                <div className="logo"></div>        
-                <span className="login-btns">
-                <button className="login-btn">
-                <Link to="/signup">
-                  Signup
-                </Link>
-                </button>
-                <button className="login-btn">
-                <Link to="/login">
-                  Login
-                </Link>
-                </button>
-                </span>
-            </div> 
+          <div className="logo"></div>
+          <span className="login-btns">
+            <Link to="/signup">
+              <button className="login-btn"> Signup</button>
+            </Link>
+
+            <Link to="/login">
+              <button className="login-btn">Login</button>
+            </Link>
+          </span>
+        </div>
       );
     }
   }

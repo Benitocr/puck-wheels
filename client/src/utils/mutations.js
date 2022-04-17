@@ -17,7 +17,7 @@ export const ADD_USER = gql`
     $password: String!
   ) {
     addUser(
-      email: $username
+      email: $email
       password: $password
     ) {
       token
@@ -29,18 +29,10 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_WISH_LIST = gql`
-  mutation addWishList($car: [ID]!) {
+  mutation addWishList($car: ID!) {
     addWishList(car: $car) {
       _id
-      purchaseDate
-      cars {
-        _id
-        name
-        description
-        price
-        quantity
-        image
-      }
+    
     }
   }
 `;

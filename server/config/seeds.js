@@ -17,22 +17,13 @@ db.once('open', async () => {
   await Car.deleteMany();
 
   const cars = await Car.insertMany([
-    {
-      model: 'Lexus',
-      category: categories[4]._id,
-      description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '4-a.jpeg',
-      // cardId: '1',
-      price: 52000,
-      year: 2021
-    },
+   
     {
       model: 'Mercedez Benz',
       category: categories[2]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '3-e.jpeg',
+      image: '3-f.png',
       // cardId: '1',
       price: 72000,
       year: 2021
@@ -42,7 +33,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '3-d.jpeg',
+      image: '3-e.png',
       // cardId: '1',
       price: 66000,
       year: 2021
@@ -52,7 +43,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '3-d.jpeg',
+      image: '3-d.png',
       // cardId: '1',
       price: 66000,
       year: 2021
@@ -62,7 +53,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '3-c.jpeg',
+      image: '3-c.png',
       // cardId: '1',
       price: 66000,
       year: 2021
@@ -73,7 +64,7 @@ db.once('open', async () => {
       category: categories[3]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '3-a.jpeg',
+      image: '3-a.png',
       // cardId: '1',
       price: 69000,
       year: 2021
@@ -83,7 +74,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '2-f.jpeg',
+      image: '2-f.png',
       // cardId: '1',
       price: 69000,
       year: 2021
@@ -93,7 +84,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '2-e.jpeg',
+      image: '2-e.png',
       // cardId: '1',
       price: 67000,
       year: 2021
@@ -103,7 +94,7 @@ db.once('open', async () => {
       category: categories[3]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '2-d.jpeg',
+      image: '2-d.png',
       // cardId: '1',
       price: 77000,
       year: 2021
@@ -113,7 +104,7 @@ db.once('open', async () => {
       category: categories[3]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '2-c.jpeg',
+      image: '2-c.png',
       // cardId: '1',
       price: 77000,
       year: 2021
@@ -123,7 +114,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '2-b.jpeg',
+      image: '2-b.png',
       // cardId: '1',
       price: 68000,
       year: 2021
@@ -133,7 +124,7 @@ db.once('open', async () => {
       category: categories[3]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '2-a.jpeg',
+      image: '2-a.png',
       // cardId: '1',
       price: 65000,
       year: 2021
@@ -143,7 +134,7 @@ db.once('open', async () => {
       category: categories[3]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '1-a.jpeg',
+      image: '1-a.png',
       // cardId: '1',
       price: 79000,
       year: 2021
@@ -153,7 +144,7 @@ db.once('open', async () => {
       category: categories[3]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '1-f.jpeg',
+      image: '1-f.png',
       // cardId: '1',
       price: 102000,
       year: 2021
@@ -163,7 +154,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '1-e.jpeg',
+      image: '1-e.png',
       // cardId: '1',
       price: 65000,
       year: 2021
@@ -173,7 +164,7 @@ db.once('open', async () => {
       category: categories[3]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '1-d.jpeg',
+      image: '1-d.png',
       // cardId: '1',
       price: 75000,
       year: 2022
@@ -183,7 +174,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '1-c.jpeg',
+      image: '1-c.png',
       // cardId: '1',
       price: 80000,
       year: 2022
@@ -193,27 +184,27 @@ db.once('open', async () => {
       category: categories[3]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '1-d.jpeg',
+      image: '1-d.png',
       // cardId: '1',
       price: 82000,
-      year: 2022
+      year: 2023
     },
     {
       model: 'Rolls Royce',
       category: categories[0]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '1-b.jpeg',
+      image: '1-b.png',
       // cardId: '1',
       price: 92000,
-      year: 2022
+      year: 2023
     },
     {
       model: 'Mercedes',
       category: categories[0]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '3-b.jpeg',
+      image: '3-b.png',
       // cardId: '2',
       price: 75000,
       year: 2021
@@ -223,10 +214,10 @@ db.once('open', async () => {
       category: categories[0]._id,
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: '3-f.jpeg',
+      image: '3-f.png',
       // cardId: '3',
       price: 65000,
-      year: 2022
+      year: 2023
     }
   ]);
 
