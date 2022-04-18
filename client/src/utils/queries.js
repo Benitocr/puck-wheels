@@ -9,6 +9,8 @@ export const QUERY_CARS = gql`
       image
       price
       year
+      horsepower
+      fuelConsumption
       category {
         _id
       }
@@ -25,6 +27,8 @@ export const QUERY_ALL_CARS = gql`
       image
       price
       year
+      horsepower
+      fuelConsumption
  
     }
   }
@@ -43,16 +47,17 @@ export const QUERY_USER = gql`
   {
     user {
       email
-      carCount
-        wishList {
-          purchaseDate
-          cars {
-          _id
-          name
-          description
-          price
-          quantity
-          image
+      wishList {
+        purchaseDate
+        cars {
+        _id
+        name
+        description
+        price
+        quantity
+        image
+        horsepower
+        fuelConsumption
         }
       }
     }

@@ -3,13 +3,13 @@ import { QUERY_ALL_CARS } from "../utils/queries";
 import { ADD_WISH_LIST } from "../utils/mutations";
 
 const ModelA = () => {
-  const { data, loading } = useQuery(QUERY_ALL_CARS, {
+  const { data } = useQuery(QUERY_ALL_CARS, {
     variables: { category: null, year: 2023 },
   });
 
   const carData = data?.cars || [];
 
-  const [addWishList, { error }] = useMutation(ADD_WISH_LIST);
+  const [addWishList] = useMutation(ADD_WISH_LIST);
 
   async function saveToWishList(id) {
     console.log(id);
@@ -40,30 +40,30 @@ const ModelA = () => {
                       <h4>UNRIVALED. UNCOMPROMISED.</h4>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-12 ">
-                      <div class="row text">
-                        <div class="col-lg-6 align-flex">
-                          <div class="fuel">
+                  <div className="row">
+                    <div className="col-md-12 ">
+                      <div className="row text">
+                        <div className="col-lg-6 align-flex">
+                          <div className="fuel">
                             <p>FUEL CONSUMPTION</p>
-                            <h1>22/28</h1>
-                            <p class="text-small">Lorem costam</p>
+                            <h1>{el.fuelConsumption}</h1>
+                            <p className="text-small">Lorem costam</p>
                           </div>
-                          <div class="horse">
+                          <div className="horse">
                             <p>HORSEPOWER</p>
-                            <h1>300</h1>
+                            <h1>{el.horsepower}</h1>
                           </div>
-                          <div class="price">
+                          <div className="price">
                             <p>STARTING AT</p>
-                            <span class="dollar">$</span>
+                            <span className="dollar">$</span>
                             <h1>{el.price}</h1>
                           </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div className="col-lg-6">
                           <p>{el.description}</p>
                         </div>
                         <button
-                          class="wish-list"
+                          className="wish-list"
                           onClick={() => saveToWishList(el.id)}
                         >
                           Save to Wish List

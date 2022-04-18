@@ -7,7 +7,7 @@ function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <div class="navbar">
+        <div className="navbar">
           <div className="logo">
             <Link to="/"></Link>
           </div>

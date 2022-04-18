@@ -22,6 +22,14 @@ const carSchema = new Schema({
         type: Number,
         required: true
     },
+    horsepower: {
+      type: Number,
+      required: true
+    },
+    fuelConsumption: {
+      type: String,
+      required: true
+    },
     category: {
       type: Schema.Types.ObjectId,
       ref: 'Category',
