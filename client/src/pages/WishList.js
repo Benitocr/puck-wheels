@@ -1,6 +1,7 @@
 import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_ALL_CARS } from "../utils/queries";
 import { ADD_WISH_LIST} from "../utils/mutations";
+import { Link } from "react-router-dom";
 
 const WishList = () => {
   const { data } = useQuery(QUERY_ALL_CARS, {
@@ -73,6 +74,8 @@ const WishList = () => {
                   </div>
                 </div>
               {/* ))} */}
+              
+
             </div>
           </div>
         </div>

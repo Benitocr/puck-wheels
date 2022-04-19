@@ -70,6 +70,7 @@ const ModelB = () => {
                   </div>
                 </div>
               ))}
+              
             </div>
           </div>
         </div>

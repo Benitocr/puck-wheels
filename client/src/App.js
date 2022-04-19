@@ -18,6 +18,7 @@ import SignUp from './pages/SignUp';
 import ModelA from "./pages/ModelA";
 import ModelB from "./pages/ModelB";
 import ModelC from "./pages/ModelC";
+import Footer from './componets/Footer';
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -54,11 +55,13 @@ function App() {
               <Route exact path="/modelB" component={ModelB} />
               <Route exact path="/modelC" component={ModelC} />
             </Switch>
+            <Footer/>
           </StoreProvider>
         </div>
       </Router>
     </ApolloProvider>
   );
 }
+
 
 export default App;

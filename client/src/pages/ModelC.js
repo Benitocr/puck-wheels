@@ -73,6 +73,7 @@ const ModelC = () => {
                   </div>
                 </div>
               ))}
+              
             </div>
           </div>
         </div>
