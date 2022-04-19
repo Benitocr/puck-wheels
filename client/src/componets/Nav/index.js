@@ -23,16 +23,21 @@ function Nav() {
                 <span>Model 2023</span>
               </button>
             </Link>
-            <Link to="/modelB">
-              {" "}
+            <Link to="/modelB">              
               <button className="login-btn">
                 <span>Model 2022</span>
               </button>
             </Link>
-            <Link to="/modelC">
-              {" "}
+            <Link to="/modelC">              
               <button className="login-btn">
                 <span>Model 2021</span>
+              </button>
+            </Link>
+            <Link to="/">              
+              <button className="login-btn" onClick={() => Auth.logout()}>
+              <span>
+              Logout
+            </span>
               </button>
             </Link>
           </span>

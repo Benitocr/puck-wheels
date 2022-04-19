@@ -1,42 +1,47 @@
-import { useQuery, useMutation } from "@apollo/client";
-import { QUERY_ALL_CARS } from "../utils/queries";
-import { ADD_WISH_LIST} from "../utils/mutations";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const WishList = () => {
-  const { data } = useQuery(QUERY_ALL_CARS, {
-    variables: { category: null, year: 2023 },
-  });
+import { useQuery, useMutation } from '@apollo/client';
+import { QUERY_USER } from '../utils/queries';
+import { REMOVE_CAR } from "../utils/mutations";
+import { REMOVE_FROM_WISHLIST } from '../utils/actions';
 
-  const wishListData = data?.wishList || [];
+function WishList() {
+  const { data } = useQuery(QUERY_USER);
+  const [removeCar, { error }] = useMutation(REMOVE_CAR);
+  let user;
 
-  const [addWishList] = useMutation(ADD_WISH_LIST);
+  if (data) {
+    user = data.user;
+  }
 
   async function removeFromWishList(id) {
     console.log(id);
-    const { data } = await addWishList({
+    const { data } = await removeCar({
       variables: { id: id },
     });
-    console.log(data);
+    console.log(data)
   }
+
   return (
     <>
       <div className="row">
         <div className="col-md-12">
           <div className="box">
             <div className="model-container">
-             {/* {wishListData.map((el) => ( */}
-                <div className="inner">
+              {user.wishList.map((el) => (
+                <div className="inner" key={el._id}>
                   <div className="image-bg">
                     <div>
                       <img
                         className="image"
-                        src="../assets/img/1-f.png"
+                        src={require(`../assets/img/${el.image}`).default}
                         alt="ModelA-1"
                       />
                     </div>
                     <div className="image-txt">
-                      <h1>name</h1>
-                      <h1>model</h1>
+                      <h1>{el.name}</h1>
+                      <h1>{el.model}</h1>
                       <h4>UNRIVALED. UNCOMPROMISED.</h4>
                     </div>
                   </div>
@@ -46,33 +51,33 @@ const WishList = () => {
                         <div className="col-lg-6 align-flex">
                           <div className="fuel">
                             <p>FUEL CONSUMPTION</p>
-                            <h1>22/28</h1>
+                            <h1>{el.fuelConsumption}</h1>
                             <p className="text-small">Lorem costam</p>
                           </div>
                           <div className="horse">
                             <p>HORSEPOWER</p>
-                            <h1>300</h1>
+                            <h1>{el.horsepower}</h1>
                           </div>
                           <div className="price">
                             <p>STARTING AT</p>
                             <span className="dollar">$</span>
-                            <h1>price</h1>
+                            <h1>{el.price}</h1>
                           </div>
                         </div>
                         <div className="col-lg-6">
-                          <p>description</p>
+                          <p>{el.description}</p>
                         </div>
                         <button
                           className="wish-list"
-                          onClick={() => removeFromWishList()}
+                          onClick={() => removeFromWishList(el.id)}
                         >
-                          Remove from Wish List
+                          Save to Wish List
                         </button>
                       </div>
                     </div>
                   </div>
                 </div>
-              {/* ))} */}
+              ))}
             </div>
           </div>
         </div>
@@ -80,5 +85,6 @@ const WishList = () => {
     </>
   );
 };
+
 
 export default WishList;
