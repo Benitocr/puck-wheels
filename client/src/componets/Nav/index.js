@@ -1,6 +1,7 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import Footer from "../Footer";
 
 function Nav() {
 
@@ -66,6 +67,8 @@ function Nav() {
     }
   }
 
+  
+
   return (
     <header className="flex-row px-1">
       <nav>
@@ -74,5 +77,20 @@ function Nav() {
     </header>
   );
 }
+
+
+{/* <footer style={{ display: "flex", width: '100vw', backgroundColor: 'black', padding: '24px', justifyContent: 'center' }}>
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', width: '80%'}}>
+    <div style={{display: 'flex', flexDirection: 'column', gap: '16px'}}>			
+        <p style={{fontSize: '24px', color: 'white', marginBottom: '24px', fontWeight: 'bold'}}  href="" > </p>
+        <a style={{color: 'grey', fontSize: '24px', textDecoration: 'none'}}href="" >Wish List  </a>
+        <a style={{color: 'grey', fontSize: '24px', textDecoration: 'none'}} href="" >Model 2023</a>
+        <a style={{color: 'grey', fontSize: '24px', textDecoration: 'none'}} href="" >Model 2022</a>
+        <a style={{color: 'grey', fontSize: '24px', textDecoration: 'none'}} href="" >Model 2021</a>
+        </div>
+        </div>
+        </footer> */}
+        
+    
 
 export default Nav;
