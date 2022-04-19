@@ -8,10 +8,10 @@ const Footer = () => {
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', width: '80%'}}>
         <div style={{display: 'flex', flexDirection: 'column', gap: '16px'}}>			
             
-            <a style={{color: 'grey', fontSize: '24px', textDecoration: 'none'}}><Link style={{color:'white'}} to="/wishList">WishList</Link>  </a>
+            {/* <a style={{color: 'grey', fontSize: '24px', textDecoration: 'none'}}><Link style={{color:'white'}} to="/wishList">WishList</Link>  </a>
             <a style={{color: 'grey', fontSize: '24px', textDecoration: 'none'}} ><Link style={{color:'white'}} to="/modelB">Model 2023</Link> </a>
             <a style={{color: 'grey', fontSize: '24px', textDecoration: 'none'}} ><Link style={{color:'white'}} to="/modelC">Model 2022</Link> </a>
-            <a style={{color: 'grey', fontSize: '24px', textDecoration: 'none'}} ><Link style={{color:'white'}} to="/modelC">Model 2021</Link> </a>
+            <a style={{color: 'grey', fontSize: '24px', textDecoration: 'none'}} ><Link style={{color:'white'}} to="/modelC">Model 2021</Link> </a> */}
 
 
 

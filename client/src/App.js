@@ -55,7 +55,8 @@ function App() {
               <Route exact path="/modelB" component={ModelB} />
               <Route exact path="/modelC" component={ModelC} />
             </Switch>
-            <Footer/>
+            {/* <Footer/>
+          */}
           </StoreProvider>
         </div>
       </Router>
