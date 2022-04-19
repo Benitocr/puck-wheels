@@ -18,7 +18,18 @@ body {
    background-image: url("./assets/img/car.jpeg");
    background-repeat: no-repeat;
    background-size: cover;
-   
+  position: absolute;
+  min-height: 100%;
+}
+
+body::after {
+  content: '';
+  display: block;
+}
+
+footer {
+  bottom: 0;
+  position: absolute;
 }
 .landing-bg {
   width: 100vw;

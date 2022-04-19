@@ -45,7 +45,7 @@ function App() {
       <Router>
         <div>
           <StoreProvider>
-            <Nav />
+            <Nav />            
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
@@ -54,9 +54,8 @@ function App() {
               <Route exact path="/modelA" component={ModelA} />
               <Route exact path="/modelB" component={ModelB} />
               <Route exact path="/modelC" component={ModelC} />
-            </Switch>
-            {/* <Footer/>
-          */}
+            </Switch>            
+            <Footer/>         
           </StoreProvider>
         </div>
       </Router>
