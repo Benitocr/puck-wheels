@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 import {
   UPDATE_CARS,
-  ADD_TO_WISHLIST,
+  ADD_WISH_LIST,
   REMOVE_FROM_WISHLIST,
   CLEAR_WISHLIST,
   UPDATE_CATEGORIES,
@@ -15,7 +15,7 @@ export const reducer = (state, action) => {
         ...state,
         cars: [...action.cars],
       };
-    case ADD_TO_WISHLIST:
+    case ADD_WISH_LIST:
       return {
         ...state,
         wishList: [...state.wishList, action.car],
