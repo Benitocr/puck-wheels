@@ -14,7 +14,7 @@ const ModelA = () => {
   async function saveToWishList(id) {
     console.log(id);
     const { data } = await addWishList({
-      variables: { id: id },
+      variables: { car: id },
     });
     console.log(data);
   }
@@ -64,7 +64,8 @@ const ModelA = () => {
                         </div>
                         <button
                           className="wish-list"
-                          onClick={() => saveToWishList(el.id)}
+                          data-id = {el._id}
+                          onClick={(e) => saveToWishList(e.target.dataset.id)}
                         >
                           Save to Wish List
                         </button>

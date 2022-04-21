@@ -1,35 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { useQuery, useMutation } from "@apollo/client";
+import { QUERY_USER } from "../utils/queries";
+import { REMOVE_WISH_LIST } from "../utils/mutations";
+import {useState} from "react";
 
-import { useQuery, useMutation } from '@apollo/client';
-import { QUERY_USER } from '../utils/queries';
-import { REMOVE_CAR } from "../utils/mutations";
-import { REMOVE_FROM_WISHLIST } from '../utils/actions';
-
-function WishList() {
+const WishList = () => {
   const { data } = useQuery(QUERY_USER);
-  const [removeCar, { error }] = useMutation(REMOVE_CAR);
-  let user;
-
-  if (data) {
-    user = data.user;
-  }
-
+  const wishListData = data?.user.wishList || [];
+console.log(data);
+  const [removeWishList] = useMutation(REMOVE_WISH_LIST);
+  const [refresh, setRefresh] = useState(false);
   async function removeFromWishList(id) {
     console.log(id);
-    const { data } = await removeCar({
-      variables: { id: id },
+    const { data } = await removeWishList({
+      variables: { car: id },
     });
-    console.log(data)
+    setRefresh(!refresh)
+    console.log(data);
   }
 
+  
   return (
     <>
       <div className="row">
         <div className="col-md-12">
           <div className="box">
             <div className="model-container">
-              {user.wishList.map((el) => (
+              {wishListData.map((el) => (
                 <div className="inner" key={el._id}>
                   <div className="image-bg">
                     <div>
@@ -40,7 +36,6 @@ function WishList() {
                       />
                     </div>
                     <div className="image-txt">
-                      <h1>{el.name}</h1>
                       <h1>{el.model}</h1>
                       <h4>UNRIVALED. UNCOMPROMISED.</h4>
                     </div>
@@ -69,9 +64,12 @@ function WishList() {
                         </div>
                         <button
                           className="wish-list"
-                          onClick={() => removeFromWishList(el.id)}
+                          data-id={el._id}
+                          onClick={(e) =>
+                            removeFromWishList(e.target.dataset.id)
+                          }
                         >
-                          Save to Wish List
+                          Remove to Wish List
                         </button>
                       </div>
                     </div>
@@ -79,12 +77,11 @@ function WishList() {
                 </div>
               ))}
             </div>
+            {refresh}
           </div>
         </div>
       </div>
     </>
   );
 };
-
-
 export default WishList;

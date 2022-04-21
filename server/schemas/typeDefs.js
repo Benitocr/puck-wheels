@@ -4,7 +4,7 @@ const typeDefs = gql `
     type User {
             _id: ID
             email: String
-            wishList: [WishList]
+            wishList: [Car]
     }
     
     type Car {
@@ -28,7 +28,6 @@ const typeDefs = gql `
 
     type WishList {
         _id: ID
-        purchaseDate: String
         cars: [Car]
     }
 
@@ -50,6 +49,7 @@ const typeDefs = gql `
         login(email: String!, password: String!) : Auth
         addUser(email: String!, password: String!) : Auth
         addWishList(car: ID!): WishList
+        removeWishList(car: ID!): WishList
         updateCar(_id: ID!, quantity: Int!): Car
         removeCar(carId: String!) : Car
     }

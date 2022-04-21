@@ -47,18 +47,16 @@ export const QUERY_USER = gql`
   {
     user {
       email
+
       wishList {
-        purchaseDate
-        cars {
         _id
-        name
+        model
         description
         price
-        quantity
         image
+        year
         horsepower
         fuelConsumption
-        }
       }
     }
   }

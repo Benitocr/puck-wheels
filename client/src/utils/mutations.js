@@ -36,6 +36,13 @@ export const ADD_WISH_LIST = gql`
     }
   }
 `;
+export const REMOVE_WISH_LIST = gql`
+  mutation removeWishList($car: ID!) {
+    removeWishList(car: $car) {
+      _id
+    }
+  }
+`;
 
 export const UPDATE_CAR = gql`
   mutation updateCar($_id: ID!, $quantity: Int!) {
