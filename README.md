@@ -28,7 +28,7 @@
 
 
 ## Web-site deployed @:
-https://cors-anywhere.herokuapp.com/ 
+https://mysterious-inlet-33459.herokuapp.com/
 
 
 ## GitHub Repository
