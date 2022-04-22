@@ -6,8 +6,8 @@
 ![React.js](https://img.shields.io/badge/-REACT-yellow)
 ![MongoDb](https://img.shields.io/badge/-MongoDB-green)
 ## Purpose
-[Puck Wheels](https://github.com/samini1/puck-wheels) 
-  The main purpose of this application was making a place where people can come and browse cars that they may seem fit tho their needs, add them to a wish list from which they can later choose ot buy or just keep as a future interest. All of this is saved to the users specific account as the user does have to create an account in order to access the inventory.
+
+  The main purpose of [Puck Wheels](https://github.com/samini1/puck-wheels)   was making a place where people can come and browse cars that they may seem fit tho their needs, add them to a wish list from which they can later choose ot buy or just keep as a future interest. All of this is saved to the users specific account as the user does have to create an account in order to access the inventory.
 
 
 
@@ -21,7 +21,7 @@
 * Apollo-server-express
 * React-router 
 * Express 
-* Node.js
+
 
 
 
